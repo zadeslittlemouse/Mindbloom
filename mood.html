@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Mood & Emotional Balance</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <p class="section">Section 1 of 8</p>
+
+        <h1>Mood & Emotional Balance</h1>
+
+        <p class="subtitle">
+            How steady or heavy your emotional baseline has felt over the past two weeks.
+        </p>
+
+        <form onsubmit="event.preventDefault(); saveAnswers('mood','anxiety.html');">
+
+            <label>1. I've felt down, flat, or emotionally heavy.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>2. I've lost interest in things I'd usually enjoy.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>3. I've felt hopeful about how my days are unfolding.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>4. It's been hard to feel real joy, even in good moments.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <button type="submit" class="btn">
+                Next →
+            </button>
+
+        </form>
+        <script src="script.js"></script>
+
+    </div>
+
+</body>
+
+</html>

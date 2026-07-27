@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Sleep & Energy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <p class="section">Section 8 of 8</p>
+        <h1>Sleep & Energy</h1>
+        <p class="subtitle">How rested and energized your body has felt over the past two weeks.</p>
+
+        <form onsubmit="event.preventDefault(); finishAssessment();">
+
+            <label>1. I've woken up feeling rested.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>2. My energy has felt low throughout the day.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>3. My sleep has felt disrupted or restless.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>4. I've had enough energy to do the things I care about.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <button type="submit" class="btn">Finish Assessment →</button>
+        </form>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

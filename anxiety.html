@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Anxiety & Stress</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <p class="section">Section 2 of 8</p>
+
+        <h1>Anxiety & Stress</h1>
+
+        <p class="subtitle">
+            How often your mind or body has felt on edge over the past two weeks.
+        </p>
+
+        <form onsubmit="event.preventDefault(); saveAnswers('anxiety','relation.html');">
+
+            <label>1. My thoughts have felt like they're racing or hard to slow down.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>2. I've felt on edge, like something's about to go wrong.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>3. I've been able to relax my body and mind, even briefly.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>4. Small worries have felt bigger than they probably are.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <button type="submit" class="btn">
+                Next →
+            </button>
+
+        </form>
+        <script src="script.js"></script>
+
+    </div>
+
+</body>
+
+</html>

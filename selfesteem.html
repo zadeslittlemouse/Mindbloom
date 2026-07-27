@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Self-Esteem & Self-Worth</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <p class="section">Section 4 of 8</p>
+        <h1>Self-Esteem & Self-Worth</h1>
+        <p class="subtitle">How you've felt about yourself over the past two weeks.</p>
+
+        <form onsubmit="event.preventDefault(); saveAnswers('self','purpose.html');">
+
+            <label>1. I've felt comfortable with who I am.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>2. I've been harsh or critical toward myself.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>3. I've felt capable of handling what's in front of me.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>4. I've compared myself to others in ways that left me feeling worse.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <button type="submit" class="btn">Next →</button>
+        </form>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

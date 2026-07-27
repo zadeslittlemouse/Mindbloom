@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Overall Result</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Your Results</h1>
+
+        <p class="tagline">
+            Thank you for completing the MindBloom Assessment.
+        </p>
+
+        <div class="score-box">
+            <h2 id="score">78%</h2>
+        </div>
+
+        <h3 id="status">😊 You're Doing Well</h3>
+
+        <p class="desc" id="message">
+            Your responses suggest you're doing well overall.
+            Some areas may need a little more attention, but remember that
+            progress comes one small step at a time.
+        </p>
+
+        <div class="line">
+            <span></span>
+            🌸
+            <span></span>
+        </div>
+
+        <a href="motivation.html" class="btn">
+            Continue →
+        </a>
+
+    </div>
+    <script>
+
+        let score = Number(localStorage.getItem("score"));
+
+        document.getElementById("score").innerHTML = score + "%";
+
+        if (score >= 80) {
+
+            document.getElementById("status").innerHTML = "🌸 Flourishing";
+
+            document.getElementById("message").innerHTML =
+                "Your emotional well-being looks strong. Keep taking care of yourself and continue the healthy habits that help you feel balanced.";
+
+        }
+        else if (score >= 60) {
+
+            document.getElementById("status").innerHTML = "🌼 Doing Well";
+
+            document.getElementById("message").innerHTML =
+                "You're managing many parts of life well. A little extra care in a few areas can help you feel even better.";
+
+        }
+        else if (score >= 50) {
+
+            document.getElementById("status").innerHTML = "🌱 Needs More Care";
+
+            document.getElementById("message").innerHTML =
+                "Life has been a little challenging lately. Be patient with yourself, celebrate small victories, and keep moving forward.";
+
+        }
+        else if (score >= 30) {
+
+            document.getElementById("status").innerHTML = "💚 Going Through a Difficult Time";
+
+            document.getElementById("message").innerHTML =
+                "Your responses suggest you've been carrying quite a lot recently. Try to rest, talk to someone you trust, and remember that support is available.";
+
+        }
+        else {
+
+            document.getElementById("status").innerHTML = "🫂 You Deserve Support";
+
+            document.getElementById("message").innerHTML =
+                "It seems you've been going through a very difficult time. This assessment isn't a diagnosis, but if these feelings continue or become overwhelming, consider talking with someone you trust or a qualified mental health professional.";
+
+        }
+
+    </script>

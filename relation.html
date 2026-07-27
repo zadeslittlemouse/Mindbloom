@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Relationships & Connection</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <p class="section">Section 3 of 8</p>
+        <h1>Relationships & Connection</h1>
+        <p class="subtitle">
+            How supported and connected you've felt with others over the past two weeks.
+        </p>
+
+        <form onsubmit="event.preventDefault(); saveAnswers('relation','selfesteem.html');">
+
+            <label>1. I've felt genuinely supported by people close to me.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>2. I've felt lonely, even when I'm around others.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <label>3. I've reached out to someone when I needed to talk.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label>4. I've felt like a burden to the people around me.</label>
+            <select required>
+                <option value="">Choose how often...</option>
+                <option value="4">Never</option>
+                <option value="3">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="1">Often</option>
+                <option value="0">Always</option>
+            </select>
+
+            <button type="submit" class="btn">Next →</button>
+        </form>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

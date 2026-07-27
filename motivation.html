@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom | Motivation</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Container where the Tenor GIF sticker will load -->
+        <div id="gif-container"></div>
+
+        <h1 id="title">You're Amazing!</h1>
+
+        <p class="desc" id="motivation">
+            Keep taking care of yourself.
+        </p>
+
+        <div class="line">
+            <span></span>
+            🌿
+            <span></span>
+        </div>
+
+        <h3>Care to give a review?</h3>
+
+        <div class="choice-buttons">
+            <button class="btn" onclick="review()">
+                Yes 😊
+            </button>
+
+            <button class="btn" onclick="bye()">
+                No Thanks
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        let score = Number(localStorage.getItem("score"));
+
+
+        if (score >= 80) {
+            title.innerHTML = "🌸 Keep Shining!";
+            motivation.innerHTML = "Your responses suggest you're feeling emotionally balanced in many areas. Celebrate your progress and continue making time for the habits that help you feel your best.";
+            gifHtml = `<div class="tenor-gif-embed" data-postid="11251557197302805164" data-share-method="host" data-aspect-ratio="1.76596" data-width="80%"><a href="https://tenor.com/view/anya-forger-jumpscare-spy-x-family-oomfie-jump-gif-11251557197302805164">Anya Forger Jumpscare GIF</a></div>`;
+        }
+        else if (score >= 60) {
+            title.innerHTML = "🌼 You're Doing Well";
+            motivation.innerHTML = "You're handling life well overall. Remember that even small moments of rest, gratitude, and self-care can make a big difference.";
+            gifHtml = `<div class="tenor-gif-embed" data-postid="13981054169997818052" data-share-method="host" data-aspect-ratio="1.76596" data-width="80%"><a href="https://tenor.com/view/anya-anya-forger-spy-x-family-cute-anime-girl-cute-gif-13981054169997818052">Anya Forger GIF</a></div>`;
+        }
+        else if (score >= 50) {
+            title.innerHTML = "🌱 Keep Growing";
+            motivation.innerHTML = "You've been facing a few challenges recently. Take one day at a time, celebrate small wins, and remember that every step forward counts.";
+            gifHtml = `<div class="tenor-gif-embed" data-postid="12628696387611324633" data-share-method="host" data-aspect-ratio="1.77857" data-width="80%"><a href="https://tenor.com/view/kirakira-gif-12628696387611324633">Kirakira GIF</a></div>`;
+        }
+        else if (score >= 30) {
+            title.innerHTML = "💚 Be Kind to Yourself";
+            motivation.innerHTML = "Life may feel heavy right now, and that's okay. Give yourself permission to rest, talk with someone you trust, and remember that you don't have to carry everything alone.";
+            gifHtml = `<div class="tenor-gif-embed" data-postid="10100883068728050025" data-share-method="host" data-aspect-ratio="1.76596" data-width="80%"><a href="https://tenor.com/view/spy-family-spy-x-family-anya-forger-tears-overwhelmed-gif-10100883068728050025">Spy Family GIF</a></div>`;
+        }
+        else {
+            title.innerHTML = "🫂 You Matter";
+            motivation.innerHTML = "Your responses suggest you've been having a very difficult time lately. This assessment isn't a diagnosis, but you deserve support. If these feelings continue or become overwhelming, consider talking with someone you trust or a qualified mental health professional.";
+            gifHtml = `<div class="tenor-gif-embed" data-postid="9806220325640148577" data-share-method="host" data-aspect-ratio="1.23881" data-width="80%"><a href="https://tenor.com/view/10-%C4%91i%E1%BB%83m-gif-9806220325640148577">10 điểm GIF</a></div>`;
+        }
+
+        // 1. Inject the selected GIF HTML into the page
+        gifContainer.innerHTML = gifHtml;
+
+        // 2. Load Tenor's script dynamically so it converts the container into an active embed
+        const tenorScript = document.createElement("script");
+        tenorScript.type = "text/javascript";
+        tenorScript.async = true;
+        tenorScript.src = "https://tenor.com/embed.js";
+        document.body.appendChild(tenorScript);
+
+        function review() {
+            window.location.href = "review.html";
+        }
+
+        function bye() {
+            window.location.href = "goodbye.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
